@@ -4,5 +4,7 @@ export interface User {
     email: string;
     fName: string;
     lName: string;
-    birthdate: string;       
+    birthdate: string;
+    height: string;
+    weight: number;       
 }
