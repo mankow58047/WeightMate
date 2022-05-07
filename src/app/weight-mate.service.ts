@@ -11,7 +11,7 @@ export class WeightMateService {
 
   USER: User[] = [
     {
-      userName: 'Jojo',
+      userName: 'Jojo1',
       password: '1234',
       email: 'jojo@email.com',
       fName: 'Jojo',
