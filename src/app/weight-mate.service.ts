@@ -1,31 +1,19 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeightMateService {
+  
+  constructor(private http: HttpClient){}
 
 
-
-  USER: User[] = [
-    {
-      userName: 'Jojo1',
-      password: '1234',
-      email: 'jojo@email.com',
-      fName: 'Jojo',
-      lName: 'Doe',
-      birthdate: '05/04/1980',
-      height: '5 foot 9 inches',
-      weight: 155,
+    addUser(newUr: User){
+      return this.http.post('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'user.json', newUr);
     }
-
-  ];
-
-//   constructor(private http: HttpClient) { 
-//     addUser(newUser: User){
-//       return this.http.post('', newUser);
-//     }
-//   }
+  
 }

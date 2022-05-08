@@ -1,5 +1,1 @@
-.user-card{
-    display: flexbox;
-    max-width: 500px;
-    margin: 25px auto;
-}
+@import "~bootstrap/dist/css/bootstrap.css"
