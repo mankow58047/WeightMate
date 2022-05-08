@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { WeightMateService } from '../weight-mate.service';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-user-detail',
