@@ -11,6 +11,7 @@ export class WeightMateService {
   
   constructor(private http: HttpClient){}
 
+  foodAPI: any = "9nvWyMu1KuPfHcQGPA4ln6tT3e0bk3tR16tpc4Jm"
 
     addUser(newUr: User){
       return this.http.post('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'user.json', newUr);
