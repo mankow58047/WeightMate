@@ -1,0 +1,9 @@
+<div class="weight-card">
+    <label for="weight-amount">Amount(lb): </label>
+    <input id="weight-amount" type="text" #amount />
+  
+  
+  <div class="weight-card">
+    <button type="button" (click)="addWeight(amount.value)">Submit</button>
+  </div>
+  

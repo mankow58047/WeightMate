@@ -1,0 +1,9 @@
+<div class="water-card">
+    <label for="water-amount">Amount(mL): </label>
+    <input id="water-amount" type="text" #amount />
+  
+  
+  <div class="water-card">
+    <button type="button" (click)="addWater(amount.value)">Submit</button>
+  </div>
+  

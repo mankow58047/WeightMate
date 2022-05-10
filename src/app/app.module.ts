@@ -8,7 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { EntryDashboardComponent } from './entry-dashboard/entry-dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserLoginComponent } from './user-login/user-login.component'
+import { UserLoginComponent } from './user-login/user-login.component';
+import { FoodComponent } from './food/food.component';
+import { WaterComponent } from './water/water.component';
+import { WeightComponent } from './weight/weight.component';
+import { ExerciseComponent } from './exercise/exercise.component';
+import { AddFoodComponent } from './add-food/add-food.component';
+import { AddWaterComponent } from './add-water/add-water.component';
+import { AddExerciseComponent } from './add-exercise/add-exercise.component';
+import { AddWeightComponent } from './add-weight/add-weight.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +25,15 @@ import { UserLoginComponent } from './user-login/user-login.component'
     EntryDashboardComponent,
     DashboardComponent,
     UserDetailComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    FoodComponent,
+    WaterComponent,
+    WeightComponent,
+    ExerciseComponent,
+    AddFoodComponent,
+    AddWaterComponent,
+    AddExerciseComponent,
+    AddWeightComponent
   ],
   imports: [
     BrowserModule, 

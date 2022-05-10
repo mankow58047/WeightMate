@@ -1,0 +1,15 @@
+<div class="exercise-card">
+    <label for="exercise-name">Name: </label>
+    <input id="exercise-name" type="text" #name />
+  
+    <label for="duration">Duration: </label>
+    <input type="text" id="duration" #duration />
+  
+    <label for="calories-burned">Calories Burned: </label>
+    <input type="text" id="caloriesBurned" #caloriesBurned />
+  
+  
+  <div class="exercise-card">
+    <button type="button" (click)="addExercise(name.value, duration.value, caloriesBurned.value)">Submit</button>
+  </div>
+  

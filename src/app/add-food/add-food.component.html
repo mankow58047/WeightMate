@@ -1,0 +1,27 @@
+<div class="food-card">
+    <label for="food-name">Name: </label>
+    <input id="food-name" type="text" #name />
+  
+    <label for="calories">Calories: </label>
+    <input type="text" id="last-name" #calories />
+  
+    <label for="fat">Fat:</label>
+    <input type="text" id="phone-number" #fat />
+  
+    <label for="cholesterol">Cholesterol: </label>
+    <input type="text" id="email" #cholesterol />
+
+    <label for="sodium">Sodium: </label>
+    <input type="text" id="email" #sodium />
+
+    <label for="sugar">Sugar: </label>
+    <input type="text" id="email" #sugar />
+    
+    <label for="protein">Protein: </label>
+    <input type="text" id="email" #protein />
+  </div>
+  
+  <div class="food-card">
+    <button type="button" (click)="addFood(name.value, calories.value, fat.value, cholesterol.value, sodium.value, sugar.value, protein.value)">Submit</button>
+  </div>
+  
