@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "weight-mate-1c908": {
+      "hosting": {
+        "WeightMate": [
+          "weight-mate-1c908"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "weight-mate-1c908"
+  }
+}

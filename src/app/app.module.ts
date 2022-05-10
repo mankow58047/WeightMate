@@ -16,7 +16,10 @@ import { ExerciseComponent } from './exercise/exercise.component';
 import { AddFoodComponent } from './add-food/add-food.component';
 import { AddWaterComponent } from './add-water/add-water.component';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
-import { AddWeightComponent } from './add-weight/add-weight.component'
+import { AddWeightComponent } from './add-weight/add-weight.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database'
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import { AddWeightComponent } from './add-weight/add-weight.component'
     BrowserModule, 
     FormsModule,
     HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
   ],
   providers: [],
   bootstrap: [AppComponent]

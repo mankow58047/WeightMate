@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "WeightMate:build:production",
+            "firebaseProject": "weight-mate-1c908",
+            "firebaseHostingSite": "weight-mate-1c908"
+          }
         }
       }
     }
