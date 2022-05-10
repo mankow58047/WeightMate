@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { WeightMateService } from '../weight-mate.service';
+
 
 @Component({
   selector: 'app-user-login',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private WMUserService: WeightMateService) { }
 
   ngOnInit(): void {
   }
+
+  // logIn(){
+  //   const userLogIn: User = [{
+  //     userName: this.userName,
+  //     password: this.password,
+  //   }]
+
+  // }
 
 }
