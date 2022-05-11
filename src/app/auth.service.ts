@@ -3,6 +3,7 @@ import { Auth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signOut } from '@angular/fire/auth';
+  import { UserLogin } from './user-login';
 
 @Injectable({
   providedIn: 'root'
@@ -11,34 +12,15 @@ export class AuthService {
 
   constructor(private auth: Auth) { }
 
-  async register({email, password}: any){
-    try{
-      const user = await createUserWithEmailAndPassword(
-        this.auth, 
-        email,
-        password
-      );
-      return user;
-    } catch(e){
-      return null;
-    }
+  login({email, password}: UserLogin){
+    return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  async login({email,password}: any) {
-    try{
-      const user = await signInWithEmailAndPassword(
-        this.auth,
-        email, 
-        password
-      );
-      return user;
-    } catch(e){
-      return null;
-    }
+  register({email, password}: UserLogin){
+    return createUserWithEmailAndPassword(this.auth, email, password);
   }
 
   logout(){
     return signOut(this.auth);
   }
-
 }

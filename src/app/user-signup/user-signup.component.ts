@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { AuthService } from '../auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-user-signup',
@@ -10,11 +10,26 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 })
 export class UserSignupComponent implements OnInit {
 
-  
+    credentials = new FormGroup ({
 
-  constructor() { }
+    })
+
+  constructor(private authService: AuthService,
+              private fb: FormBuilder) { }
+
+  get email(){
+    return this.credentials.get('email');
+  }
+
+  get password(){
+    return this.credentials.get('password')
+  }
 
   ngOnInit(): void {
+    this.credentials = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
 
 }
