@@ -16,21 +16,7 @@ export class AppComponent {
   title = 'WeightMate';
 
   
-  showFood() {
-    this.foodService.display = 1;
-  }
-
-  showWater() {
-    this.waterService.display = 2;
-  }
-
-  showWeight() {
-    this.weightService.display = 3;
-  }
-
-  showExercise() {
-    this.exerciseService.display = 4;
-  }
+  
 
 }
 
