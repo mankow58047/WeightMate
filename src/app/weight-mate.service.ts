@@ -20,8 +20,6 @@ export class WeightMateService {
    return fetch(this.foodURL).then(Response => Response.json())
   }
 
-
-
     addUser(newUr: User){
       return this.http.post('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'user.json', newUr);
     }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +18,11 @@ import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 import { AddWeightComponent } from './add-weight/add-weight.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideDatabase,getDatabase } from '@angular/fire/database'
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AngularFireModule } from 'angularfire2';
+
+
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database'
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
+    AngularFireModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
