@@ -12,6 +12,8 @@ export class WeightMateService {
   
   constructor(private http: HttpClient){}
 
+  display: number = 1;
+  
   foodAPI: string = '9nvWyMu1KuPfHcQGPA4ln6tT3e0bk3tR16tpc4Jm'
   foodQuery: any = 'chedder cheese'
   foodURL: string = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key='+this.foodAPI+'&query'+this.foodQuery
