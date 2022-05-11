@@ -6,7 +6,9 @@
       <Button class="btn btn-primary">Add Water</Button>
       <button class="btn btn-secondary">Add Exercise</button>
       <button class="btn btn-info">Add Weight</button>
-      <button class="btn btn-info">Add Food Item</button>
+      <button class="btn btn-info">
+        <a (click)="showAddFood()">Add Food Item</a>
+      </button>
       <button class="btn btn-secondary">See Graphs</button>
       <button class="btn btn-secondary">Profile</button>
       <button class="btn btn-info">
@@ -24,6 +26,7 @@
 
 <div>
   <app-user-login *ngIf="display == 10" ></app-user-login>
+  <app-add-food *ngIf="display == 11"></app-add-food>
 </div>
 
 

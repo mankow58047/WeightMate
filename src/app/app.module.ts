@@ -22,8 +22,6 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +45,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-     provideAuth(() => getAuth()),
-    
-  ],
+    provideAuth(() => getAuth()),
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -23,7 +23,7 @@ export class AddFoodComponent implements OnInit {
         protein: protein,
       };
       this.foodService.addFood(newFood);
-      this.foodService.display = 1;
+      this.foodService.display = 11;
     }
 
   ngOnInit(): void {

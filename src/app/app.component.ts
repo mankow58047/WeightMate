@@ -23,8 +23,9 @@ export class AppComponent {
     //this.WMService.display = 10;
   }
 
-  
-  
+  showAddFood(){
+    this.display = 11;
+  }
 
 }
 
