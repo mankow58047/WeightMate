@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { provideDatabase,getDatabase, Database } from '@angular/fire/database';
+import { WeightMateService } from './weight-mate.service';
 import { ExerciseService } from './exercise.service';
 import { FoodService } from './food.service';
 import { WaterService } from './water.service';

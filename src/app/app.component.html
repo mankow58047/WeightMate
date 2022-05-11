@@ -9,6 +9,9 @@
       <button class="btn btn-info">Add Food Item</button>
       <button class="btn btn-secondary">See Graphs</button>
       <button class="btn btn-secondary">Profile</button>
+      <button class="btn btn-info">
+        <a (click)="showSignIn()">Sign In</a>
+      </button>
       <button class="btn btn-info">Log Out</button>
   </div>
 </nav>
@@ -36,11 +39,11 @@
 <div class="container">
   <h1 class="bigFont">
     Welcome to Weight Mate!
-    <div>
-      <button class="btn btn-info">Sign In</button>
-    </div>
   </h1>
-  
+</div>
+
+<div>
+  <app-user-login *ngIf="display == 10" ></app-user-login>
 </div>
 
 
