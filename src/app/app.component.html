@@ -23,6 +23,26 @@
   
 </div>
 
+<!--
+  START OF DISPLAY FOR EACH COMPONENT
+-->
+
+<div>
+  <app-add-food *ngIf="display == 1"></app-add-food>
+</div>
+
+<div>
+  <app-add-water *ngIf="display ==2"></app-add-water>
+</div>
+
+  <div>
+    <app-add-weight *ngIf="display ==3"></app-add-weight>
+  </div>
+
+  <div>
+    <app-add-exercise *ngIf="display ==4"></app-add-exercise>
+  </div>
+
 <app-user></app-user>
 
 <app-entry-dashboard></app-entry-dashboard>

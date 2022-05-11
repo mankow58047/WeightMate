@@ -18,6 +18,7 @@ export class AddExerciseComponent implements OnInit {
       caloriesBurned: caloriesBurned,
     };
     this.exerciseService.addExercise(newExercise);
+    this.exerciseService.display = 4;
   }
 
   ngOnInit(): void {

@@ -16,6 +16,7 @@ export class AddWeightComponent implements OnInit {
       amount: amount,
     };
     this.weightService.addWeight(newWeight);
+    this.weightService.display = 3;
   }
 
   ngOnInit(): void {

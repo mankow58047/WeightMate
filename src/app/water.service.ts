@@ -6,6 +6,8 @@ import { Water } from './water';
   providedIn: 'root'
 })
 export class WaterService {
+  
+  display: number = 2;
 
   intWater: Water[] = [
 

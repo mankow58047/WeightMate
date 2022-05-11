@@ -7,6 +7,8 @@ import { Exercise } from './exercise';
 })
 export class ExerciseService {
 
+  display: number = 4;
+
   intExercise: Exercise[] = [
 
   ];

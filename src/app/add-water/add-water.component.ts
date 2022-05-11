@@ -16,6 +16,7 @@ export class AddWaterComponent implements OnInit {
       amount: amount,
     };
     this.waterService.addWater(newWater);
+    this.waterService.display = 2;
   }
 
   ngOnInit(): void {

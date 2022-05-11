@@ -7,6 +7,8 @@ import { Food } from './food';
 })
 export class FoodService {
 
+  display: number = 1;
+
   intFood: Food[] = [
     
 

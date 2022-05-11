@@ -6,6 +6,8 @@ import { Weight } from './weight';
   providedIn: 'root'
 })
 export class WeightService {
+  
+  display: number = 3;
 
   intWeight: Weight[] = [
 
