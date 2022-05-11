@@ -39,9 +39,9 @@ export class AppComponent {
   addExercise() {
     this.exerciseService.display = 4;
   }
-  showSignIn(){
-    this.display =10;
-  } 
+  // showSignIn(){
+  //   this.display =10;
+  // } 
 
 }
 

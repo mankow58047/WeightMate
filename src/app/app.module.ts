@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EntryDashboardComponent } from './entry-dashboard/entry-dashboard.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component'
 import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserLoginComponent } from './user-login/user-login.component';
+import { AuthModule } from './features/auth/auth.module';
 import { FoodComponent } from './food/food.component';
 import { WaterComponent } from './water/water.component';
 import { WeightComponent } from './weight/weight.component';
@@ -23,6 +23,11 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterPageComponent } from './register-page/register-page.component';
+
+
+
 
 
 @NgModule({
@@ -32,7 +37,6 @@ import { RouterModule } from '@angular/router';
     EntryDashboardComponent,
     DashboardComponent,
     UserDetailComponent,
-    UserLoginComponent,
     FoodComponent,
     WaterComponent,
     WeightComponent,
@@ -40,8 +44,10 @@ import { RouterModule } from '@angular/router';
     AddFoodComponent,
     AddWaterComponent,
     AddExerciseComponent,
-    AddWeightComponent
-  ],
+    AddWeightComponent,
+    RegisterPageComponent,
+    
+   ],
   imports: [
     BrowserModule, 
     FormsModule,
@@ -51,8 +57,11 @@ import { RouterModule } from '@angular/router';
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    AuthModule
     ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

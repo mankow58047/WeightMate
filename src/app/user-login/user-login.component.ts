@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserLogin } from '../user-login';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -9,12 +12,18 @@ import { UserLogin } from '../user-login';
 })
 export class UserLoginComponent implements OnInit {
 
-  //constructor(private WMUserService: WeightMateService) { }
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router: Router
+     ) { }
 
    ngOnInit(): void {
   }
 
-  logIn(){
-
+  login(loginData: UserLogin) {
+    this.authService
+      .login(loginData)
+      .then(() => this.router.navigate(['/dashboard']))
+      .catch((e) => console.log(e.message));
   }
 }
