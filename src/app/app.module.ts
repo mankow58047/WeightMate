@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EntryDashboardComponent } from './entry-dashboard/entry-dashboard.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './features/dashboard/dashboard.component'
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { FoodComponent } from './food/food.component';
@@ -22,6 +22,7 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { AppRoutingModule } from './app-routing.module';
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
     AppRoutingModule,
+    RouterModule
     ],
   providers: [],
   bootstrap: [AppComponent]
