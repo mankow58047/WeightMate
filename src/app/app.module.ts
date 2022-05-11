@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
+    AppRoutingModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
