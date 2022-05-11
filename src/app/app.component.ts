@@ -11,21 +11,37 @@ import { WeightService } from './weight.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ExerciseService, FoodService, WaterService, WeightService],
+  providers: [WaterService, FoodService, WeightService, ExerciseService],
 })
+
 export class AppComponent {
   title = 'WeightMate';
-  display: number =1;
-  constructor( private WMService: WeightMateService){}
+  display: number = 0;
 
-  showSignIn(){
-    this.display = 10;
-    //this.WMService.display = 10;
+  constructor(private waterService: WaterService, private weightService: WeightService,
+     private foodService: FoodService, private exerciseService: ExerciseService) { }
+
+  addFood() {
+    this.foodService.display = 1;
   }
 
   showAddFood(){
     this.display = 11;
   }
+  addWater() {
+    this.waterService.display = 2;
+  }
+
+  addWeight() {
+    this.weightService.display = 3;
+  }
+
+  addExercise() {
+    this.exerciseService.display = 4;
+  }
+  showSignIn(){
+    this.display =10;
+  } 
 
 }
 
