@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { provideDatabase,getDatabase, Database } from '@angular/fire/database';
+
 
 @Component({
   selector: 'app-root',
@@ -9,3 +11,4 @@ export class AppComponent {
   title = 'WeightMate';
 
 }
+

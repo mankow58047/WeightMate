@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import * as internal from 'stream';
+//import * as internal from 'stream';
 //import { EventEmitter } from 'stream';
 
 @Component({

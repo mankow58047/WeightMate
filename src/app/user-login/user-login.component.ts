@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { WeightMateService } from '../weight-mate.service';
+import { UserLogin } from '../user-login';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 
 @Component({
@@ -10,17 +12,12 @@ import { WeightMateService } from '../weight-mate.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  constructor(private WMUserService: WeightMateService) { }
+  //constructor(private WMUserService: WeightMateService) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
   }
 
-  // logIn(){
-  //   const userLogIn: User = [{
-  //     userName: this.userName,
-  //     password: this.password,
-  //   }]
+  logIn(){
 
-  // }
-
+  }
 }
