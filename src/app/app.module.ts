@@ -25,6 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+
 
 
 
@@ -46,7 +48,8 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     AddExerciseComponent,
     AddWeightComponent,
     RegisterPageComponent,
-    
+    RegisterFormComponent,
+  
    ],
   imports: [
     BrowserModule, 

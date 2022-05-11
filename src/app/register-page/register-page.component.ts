@@ -18,11 +18,11 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register(data: UserLogin) {
+  register(data: UserLogin){
     this.authService
-      .register(data)
-      .then(() => this.router.navigate(['/login']))
-      .catch((e) => console.log(e.message));
+    .register(data)
+    .then(()=> this.router.navigate(['/login']))
+    .catch((e)=> console.log(e.message));
   }
 
 }
