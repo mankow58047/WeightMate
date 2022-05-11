@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { WeightMateService } from '../weight-mate.service';
 import { UserLogin } from '../user-login';
-import { AngularFireModule } from 'angularfire2';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 

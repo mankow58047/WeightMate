@@ -19,7 +19,7 @@ import { AddWeightComponent } from './add-weight/add-weight.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { AngularFireModule } from 'angularfire2';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
@@ -47,7 +47,7 @@ import { AngularFireModule } from 'angularfire2';
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-    AngularFireModule,
+     provideAuth(() => getAuth()),
     
   ],
   providers: [],
