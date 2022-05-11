@@ -22,22 +22,22 @@ export class AppComponent {
      private foodService: FoodService, private exerciseService: ExerciseService) { }
 
   addFood() {
-    this.foodService.display = 1;
+    this.foodService.display = 1;   //Should this just be deleted?
   }
 
   showAddFood(){
     this.display = 11;
   }
-  addWater() {
-    this.waterService.display = 2;
+  showAddWater() {
+    this.waterService.display = 12;
   }
 
-  addWeight() {
-    this.weightService.display = 3;
+  showAddWeight() {
+    this.weightService.display = 13;
   }
 
-  addExercise() {
-    this.exerciseService.display = 4;
+  showAddExercise() {
+    this.exerciseService.display = 14;
   }
   // showSignIn(){
   //   this.display =10;
