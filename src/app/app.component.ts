@@ -9,6 +9,7 @@ import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,14 +20,14 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'WeightMate';
   display: number = 0;
-
+  
   constructor(private waterService: WaterService, 
-    private weightService: WeightService,
-     private foodService: FoodService, 
-     private exerciseService: ExerciseService, 
-     private authService: AuthService,
-     private router: Router,
-     ) { }
+      private weightService: WeightService,
+      private foodService: FoodService, 
+      private exerciseService: ExerciseService, 
+      private authService: AuthService,
+      private router: Router,
+      ) { }
 
   addFood() {
     this.foodService.display = 1;   //Should this just be deleted?
@@ -55,5 +56,7 @@ export class AppComponent {
     .then(() => this.router.navigate(['/']))
     .catch((e)=> console.log(e.message));
   }
+
+  
 }
 
