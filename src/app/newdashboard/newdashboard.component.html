@@ -1,0 +1,137 @@
+<!--
+  START OF FOOD SECTION
+-->
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label>
+                    <h5>Food Name:</h5>
+                </label>
+                <input type="text" class="form-control" #foodName />
+                <label>
+                    <h5>Calories:</h5>
+                </label>
+                <input type="text" class="form-control" #foodCalories />
+                <label>
+                    <h5>Fat(g):</h5>
+                </label>
+                <input type="text" class="form-control" #foodFat />
+                <label>
+                    <h5>Cholesterol(mg):</h5>
+                </label>
+                <input type="text" class="form-control" #foodCholesterol />
+                <label>
+                    <h5>Sodium(mg):</h5>
+                </label>
+                <input type="text" class="form-control" #foodSodium />
+                <label>
+                    <h5>Sugar(g):</h5>
+                </label>
+                <input type="text" class="form-control" #foodSugar />
+                <label>
+                    <h5>Protein(g):</h5>
+                </label>
+                <input type="text" class="form-control" #foodProtein />
+            </div>
+
+            <button class="btn btn-primary" (click)="onCreateFood(foodName.value, foodCalories.valueAsNumber, foodFat.valueAsNumber, foodCholesterol.valueAsNumber, foodSodium.valueAsNumber, 
+          foodSugar.valueAsNumber, foodProtein.valueAsNumber)">
+                Add Food
+            </button>
+        </div>
+    </div>
+</div>
+<!--End food section -->
+
+
+
+<!--
+      START OF EXERCISE SECTION
+    -->
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label>
+                    <h5>Exercise Name:</h5>
+                </label>
+                <input type="text" class="form-control" #exerciseName />
+                <label>
+                    <h5>Duration(Min):</h5>
+                </label>
+                <input type="text" class="form-control" #exerciseDuration />
+                <label>
+                    <h5>Calories Burned:</h5>
+                </label>
+                <input type="text" class="form-control" #exerciseCaloriesBurned />
+            </div>
+
+            <button class="btn btn-primary"
+                (click)="onCreateExercise(exerciseName.value, exerciseDuration.valueAsNumber, exerciseCaloriesBurned.valueAsNumber)">
+                Add Exercise
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--
+          END OF EXERCISE SECTION
+        -->
+
+
+
+<!--
+        START OF ADDING WATER SECTION
+      -->
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label>
+                    <h5>Water Amount(mL):</h5>
+                </label>
+                <input type="text" class="form-control" #waterAmount />
+            </div>
+
+            <button class="btn btn-primary" (click)="onCreateWaterAdded(waterAmount.valueAsNumber)">
+                Add Water
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--
+          END OF ADDING WATER SECTION
+        -->
+
+
+
+<!--
+          START OF ADDING WEIGHT SECTION
+        -->
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label>
+                    <h5>Weight(lb):</h5>
+                </label>
+                <input type="text" class="form-control" #weightAmount />
+            </div>
+
+            <button class="btn btn-primary" (click)="onCreateWeight(weightAmount.valueAsNumber)">
+                Add Weight
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--
+              END OF ADDING WEIGHT SECTION
+            -->
