@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
+import { Food } from './food';
 
 
 
@@ -27,6 +28,10 @@ export class WeightMateService {
 
     getUser(){
       return this.http.get<User[]>('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'user.json');
+    }
+
+    addFood(newFood:Food){
+      return this.http.post('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'food.json', newFood);
     }
 
     

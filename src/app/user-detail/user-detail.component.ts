@@ -42,6 +42,6 @@ export class UserDetailComponent implements OnInit {
       weight: this.weight,
     }
     this.WMUserService.addUser(newUser).subscribe(data => {console.log(data)});
-    this.WMUserService.display=1;
+    this.WMUserService.display=11;
   }
 }

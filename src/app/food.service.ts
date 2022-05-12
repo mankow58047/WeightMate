@@ -17,6 +17,6 @@ export class FoodService {
   constructor(private http: HttpClient) { }
 
   addFood(newFood: Food) {
-    this.intFood.push(newFood);
+    return this.http.post('https://weight-mate-1c908-default-rtdb.firebaseio.com/'+'food.json', newFood);
   }
 }
