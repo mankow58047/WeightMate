@@ -3,12 +3,11 @@
     <h1>
       <span class="navbar-brand mb-0 h1">Weight Mate</span>
     </h1>
-      <Button class="btn btn-primary">Add Water</Button>
-      <button class="btn btn-secondary">Add Exercise</button>
-      <button class="btn btn-info">Add Weight</button>
-      <button class="btn btn-info">
-        <a (click)="showAddFood()">Add Food Item</a>
-      </button>
+    <a (click)="showAddWater()">Add Water</a>
+    <a (click)="showAddWeight()">Add Weight</a>
+    <a (click)="showAddFood()">Add Food Item</a>
+    <a (click)="showAddExercise()">Add Exercise</a>
+
       <button class="btn btn-secondary">See Graphs</button>
       <button class="btn btn-secondary">Profile</button>
 
@@ -25,6 +24,9 @@
 <div>
   
   <app-add-food *ngIf="display == 11"></app-add-food>
+  <app-add-water *ngIf="display == 12"></app-add-water>
+  <app-add-weight *ngIf="display == 13"></app-add-weight>
+  <app-add-exercise *ngIf="display == 14"></app-add-exercise>
 </div>
 
 
