@@ -46,9 +46,9 @@ export class AppComponent {
   showAddExercise() {
     this.exerciseService.display = 14;
   }
-  // showSignIn(){
-  //   this.display =10;
-  // } 
+  showSignIn(){
+    this.display =10;
+  } 
   logout(){
     this.authService
     .logout()

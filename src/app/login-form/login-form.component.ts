@@ -35,5 +35,6 @@ export class LoginFormComponent implements OnInit {
   onSubmit() {
     this.formData.emit(this.form.value);
   }
+  
 
 }

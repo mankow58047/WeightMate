@@ -3,6 +3,7 @@ import { User } from '../user';
 import { WeightMateService } from '../weight-mate.service';
 import { NgModule } from '@angular/core';
 
+
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
@@ -11,6 +12,7 @@ import { NgModule } from '@angular/core';
 export class UserDetailComponent implements OnInit {
 
   userList: User[] = [];
+    uid!: string;
     userName!: string;
     password!: string;
     email!: string;
@@ -29,6 +31,7 @@ export class UserDetailComponent implements OnInit {
 
   addNewUser(){
     const newUser: User = {
+      uid: this.uid,
       userName: this.userName,
       password: this.password,
       email: this.email,
@@ -39,5 +42,6 @@ export class UserDetailComponent implements OnInit {
       weight: this.weight,
     }
     this.WMUserService.addUser(newUser).subscribe(data => {console.log(data)});
+    this.WMUserService.display=1;
   }
 }

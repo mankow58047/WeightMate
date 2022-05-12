@@ -10,6 +10,9 @@
 
       <button class="btn btn-secondary">See Graphs</button>
       <button class="btn btn-secondary">Profile</button>
+      <button class="btn btn-secondary">
+        <a (click)="showSignIn()">User Info</a>  
+      </button>
 
       <button class="btn btn-info">
         <a (click)="logout()">Log Out</a>
@@ -27,6 +30,7 @@
   <app-add-water *ngIf="display == 12"></app-add-water>
   <app-add-weight *ngIf="display == 13"></app-add-weight>
   <app-add-exercise *ngIf="display == 14"></app-add-exercise>
+  <app-user-detail *ngIf="display == 10"></app-user-detail>
 </div>
 
 
