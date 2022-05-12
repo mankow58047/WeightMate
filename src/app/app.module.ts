@@ -26,6 +26,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { UserWriteComponent } from './user-write/user-write.component';
 
 
 
@@ -49,6 +50,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     AddWeightComponent,
     RegisterPageComponent,
     RegisterFormComponent,
+    UserWriteComponent,
   
    ],
   imports: [

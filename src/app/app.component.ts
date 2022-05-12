@@ -5,6 +5,8 @@ import { ExerciseService } from './exercise.service';
 import { FoodService } from './food.service';
 import { WaterService } from './water.service';
 import { WeightService } from './weight.service';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,8 +20,13 @@ export class AppComponent {
   title = 'WeightMate';
   display: number = 0;
 
-  constructor(private waterService: WaterService, private weightService: WeightService,
-     private foodService: FoodService, private exerciseService: ExerciseService) { }
+  constructor(private waterService: WaterService, 
+    private weightService: WeightService,
+     private foodService: FoodService, 
+     private exerciseService: ExerciseService, 
+     private authService: AuthService,
+     private router: Router,
+     ) { }
 
   addFood() {
     this.foodService.display = 1;
@@ -42,6 +49,11 @@ export class AppComponent {
   // showSignIn(){
   //   this.display =10;
   // } 
-
+  logout(){
+    this.authService
+    .logout()
+    .then(() => this.router.navigate(['/']))
+    .catch((e)=> console.log(e.message));
+  }
 }
 

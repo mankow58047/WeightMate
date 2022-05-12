@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { Auth,   
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  signOut } from '@angular/fire/auth';
+  signOut, 
+  user} from '@angular/fire/auth';
   import { UserLogin } from './user-login';
+  import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +25,6 @@ export class AuthService {
   logout(){
     return signOut(this.auth);
   }
+
+  
 }

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-//import { userInfo } from 'os';
+
 
 
 @Injectable({
